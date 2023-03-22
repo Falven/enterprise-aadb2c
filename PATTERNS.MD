@@ -1,4 +1,4 @@
-# Obligatory Patterns
+# Patterns
 
 Fran Aguilera
 <fraguile@microsoft.com>
