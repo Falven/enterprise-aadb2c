@@ -31,7 +31,7 @@ Any kind of input from users or data accessible by the browser should be sanitiz
 
 ## Template HTML
 
-Separate, meaningfully-named files for any custom-injected HTML into a _components_ directory consisting of templates.
+Separate, meaningfully-named files for any custom-injected HTML into templates.
 
 ```js
 import i18next from 'i18next';
