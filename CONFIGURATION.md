@@ -109,12 +109,13 @@ Recommended Extensions:
 
 Recommended launch configurations:
 
+Useful for debugging webpack configurations.
+
 `.vscode/launch.json`
 
 ```json
 {
   [
-    // Useful for debugging webpack configurations.
     {
       "name": "Debug Webpack",
       "type": "node",
