@@ -208,7 +208,19 @@ if (typeof jQuery !== 'undefined' && typeof $ !== 'undefined') {
 }
 ```
 
-2. Reacting to user input. Handler ordering is useful for performing frontend input validation:
+2. Can wait for AADB2C framework pageReady signal:
+
+```js
+const sleep = (m) => new Promise((r) => setTimeout(r, m));
+
+export const waitFor = async (key, interval = 10) => {
+  while (!window[key]) await sleep(interval);
+};
+
+waitFor("pageReady").then(() => setPageReady(true));
+```
+
+3. Reacting to user input. Handler ordering is useful for performing frontend input validation:
 
 ```js
 /**
@@ -247,7 +259,7 @@ function handleSignupValidationFailedUX(event, data) {
 $myButton.on('signupValidationFailed', handleSignupValidationFailedUX);
 ```
 
-3. Reacting to network requests (Useful for error handling).
+4. Reacting to network requests (Useful for error handling).
 
 ```js
 /**
@@ -300,7 +312,7 @@ const handleSomeError = registerAjaxCompleteHandler(
 );
 ```
 
-4. Global AADB2C data:
+5. Global AADB2C data:
 
 ```js
 /**
@@ -310,7 +322,7 @@ const handleSomeError = registerAjaxCompleteHandler(
 window.CONTENT['required_field'];
 ```
 
-5. Function overriding:
+6. Function overriding:
 
 ```js
 /**
